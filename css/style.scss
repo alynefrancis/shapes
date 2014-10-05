@@ -1,0 +1,173 @@
+body {
+
+background: #444;
+}
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+
+//triangle 
+.triangle {
+    width: 0;
+    height: 0;
+    border: solid 50px transparent;
+
+    border-bottom-color: #363399;
+  }
+
+//box with arrow
+
+.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid black;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #c2e1f5;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+//hexagon
+
+.hex {
+    float: left;
+    margin-right: -26px;
+    margin-bottom: -50px;
+}
+.hex .left {
+    float: left;
+    width: 0;
+    border-right: 30px solid #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hex .middle {
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: #6C6;
+}
+.hex .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hex-row {
+    clear: left;
+}
+.hex.even {
+    margin-top: 53px;
+}
+
+
+//gradient box
+
+.gradient_box {
+	width: 300px;
+	height: 200px;
+	border: 2px solid black;
+	background: linear-gradient(#363399 0%, #94BFDB 100%);
+}
+.hard_stops {
+	width: 300px;
+	height: 200px;
+	border: 2px solid black;
+    background: linear-gradient(#64C7CC 0%, #64C7CC 50%,
+                                #128B98 50%, #128B98 100%); 
+
+}
+
+//not declaring an angle will assume top to bottom
+//can pass in "to right" at the start to make it go to the right
+// .hard_stops_angle {
+// 	width: 300px;
+// 	height: 200px;
+// 	border: 2px solid black;
+//     background: linear-gradient(-45deg, #64C7CC 0%, #64C7CC 50%, #128B98 50%, #128B98 100%);                            
+//   }
+
+  .hard_stops_angle {
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+  background-image: url(http://placepuppy.it) fixed no-repeat cover;
+  // background: linear-gradient(-45deg, #64C7CC 0%, #64C7CC 50%, transparent 50%, transparent 100%);                            
+  }
+
+  .hard_stops_angle:hover {
+  	transform: scaleX(2);
+    transition: all 2s ease-in-out;
+  }
+
+ .stripes {
+ 	width: 300px;
+	height: 200px;
+	border: 2px solid black;
+    background-image: linear-gradient(#64C7CC 0%, #64C7CC 50%, #128B98 50%, #128B98 100%);
+    background-size: 70px;
+
+ }
+  .stripes:hover {
+    	transform: scale(1.3);
+    }
+
+ .radial_gradient {
+ 	width: 300px;
+	height: 200px;
+	border: 2px solid black;
+  	background-image: radial-gradient(circle at top right, yellow,#f06d06);
+  	  transform: skew(-20deg);
+  }
+  .skew p {
+    transform: skew(-20deg);
+  }
+
+ .radial_stops {
+  	width: 300px;
+  	height: 200px;
+  	border: 2px solid black;
+  	background: repeating-radial-gradient(circle at 0 0,  #eee, #ccc 50px);   
+  	 transform: rotate(10deg);
+}     
+
+ .diamond {
+    width: 150px;
+    height: 150px;
+    background: #363399;
+    transform: rotate(45deg);
+  }
+
+  .narrow_diamond {
+    width: 150px;
+    height: 150px;
+    background: #64C7CC;
+    transform: scaleY(0.6) rotate(45deg);
+  }
+     
+
+
+
+
